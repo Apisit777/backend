@@ -25,4 +25,21 @@ Route::middleware('auth:sanctum')->group(function() {
 
 Route::get('users', [UsersController::class, 'users']);
 Route::post('signup', [AuthController::class, 'signup']);
+
+// Test API
+Route::post('foods', [UsersController::class, 'store']);
+
+// ภาระหนี้สินเชื่อ
+Route::get('loan_debts', [UsersController::class, 'loan_debts']);
+// get_code
+Route::get('get_code', [UsersController::class, 'get_code']);
+
+// Test รหัสลูกค้า
+Route::get('customer_code', [UsersController::class, 'customer_code']);
+
+// update_loan_debts
+Route::post('update_loan_debts', [UsersController::class, 'update_loan_debts']);
+Route::post('update_loan_debts/{id}', [UsersController::class, 'update_loan_debts']);
+Route::get('edit_loan_debts/{id}', [UsersController::class, 'edit_loan_debts']);
+
 Route::post('login', [AuthController::class, 'login']);
