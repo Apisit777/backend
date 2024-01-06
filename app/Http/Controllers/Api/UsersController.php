@@ -6,6 +6,7 @@ use App\Models\PG_users;
 use App\Models\LoanDebt;
 use App\Models\Test;
 use App\Models\food;
+use App\Models\Customer;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -39,6 +40,15 @@ class UsersController extends Controller
         ->get();
 
         return response()->json($users);
+    }
+
+    public function get_detail_user() {
+        $get_detail_user = Customer::select(
+            'customers.*'
+        )
+        ->get();
+
+        return response()->json($get_detail_user);
     }
 
     public function loan_debts()
@@ -138,7 +148,7 @@ class UsersController extends Controller
 
         return response()->json($loanDdebt);
     }
-    
+
     public function update_loan_debts(Request $request)
     {
         // dd($request);

@@ -37,6 +37,9 @@ Route::get('get_code', [UsersController::class, 'get_code']);
 // Test รหัสลูกค้า
 Route::get('customer_code', [UsersController::class, 'customer_code']);
 
+// get_detail_user
+Route::get('get_detail_user', [UsersController::class, 'get_detail_user']);
+
 // update_loan_debts
 Route::post('update_loan_debts', [UsersController::class, 'update_loan_debts']);
 Route::post('update_loan_debts/{id}', [UsersController::class, 'update_loan_debts']);

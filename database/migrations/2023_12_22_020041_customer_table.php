@@ -29,8 +29,8 @@ return new class extends Migration
             $table->string('customer_lastname', 255)->nullable()->comment('นามสกุลลูกค้า');
             $table->string('customer_nickname', 255)->nullable()->comment('ชื่อเล่นลูกค้า');
             $table->string('customer_phone_number', 255)->nullable()->comment('เบอร์โทรลูกค้า');
-            $table->string('customer_firstname_ENG', 255)->nullable()->comment('ชื่อลูกค้า (ENG)');
-            $table->string('customer_lastname_ENG', 255)->nullable()->comment('นามสกุลลูกค้า (ENG)');
+            $table->string('customer_firstname_en', 255)->nullable()->comment('ชื่อลูกค้า (ENG)');
+            $table->string('customer_lastname_en', 255)->nullable()->comment('นามสกุลลูกค้า (ENG)');
             $table->date('birthday')->nullable()->comment('วันเกิด');
             $table->string('case_age', 255)->nullable()->comment('อายุทำเคส');
             $table->string('current_age', 255)->nullable()->comment('อายุปัจจุบัน');
@@ -81,9 +81,9 @@ return new class extends Migration
             $table->string('reference_person2_phone_number', 255)->nullable()->comment('เบอร์โทร (บุคคลอ้างอิง 2.)');
             $table->string('reference_person2_address', 255)->nullable()->comment('ที่อยู่ (บุคคลอ้างอิง 2.)');
             $table->string('special_installment_rate_month', 255)->nullable()->comment('อัตราการผ่อนพิเศษ/เดือน');
-            $table->text('note_Special_installment')->nullable()->comment('หมายเหตุ (อัตราการผ่อนพิเศษ/เดือน)');
+            $table->text('note_special_installment')->nullable()->comment('หมายเหตุ (อัตราการผ่อนพิเศษ/เดือน)');
             $table->string('case_administrator', 255)->nullable()->comment('ผู้ดูแลเคส');
-            $table->tinyInteger('customer_grade')->nullable()->comment('เกรดลูกค้า');
+            $table->tinyInteger('customer_grade')->nullable()->comment('เกรดลูกค้า 1=A 2=B 3=C 4=D');
             $table->string('case_analyst', 255)->nullable()->comment('ผู้วิเคราะห์เคส');
             $table->string('approval_result_status', 255)->nullable()->comment('สถานะผลการอนุมัติ');
             $table->string('reason_reject', 255)->nullable()->comment('เหตุผลReject');
